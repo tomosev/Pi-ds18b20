@@ -28,3 +28,15 @@ def loop(ds18b20):
         if read(ds18b20) != None:
             temperature2 = "%0.3f C" % read(ds18b20)[0]
             return temperature2
+
+
+def kill():
+    quit()
+
+
+if __name__ == "__main__":
+    try:
+        serialNum = sensor()
+        loop(serialNum)
+    except KeyboardInterrupt:
+        kill()
