@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 
 def temp(request):
+    # This is the location of your device, the 28-3c01d60784f5 will be diffirent for everyone.
     location = "/sys/bus/w1/devices/28-3c01d60784f5/w1_slave"
     tfile = open(location)
     text = tfile.read()
