@@ -2,7 +2,7 @@ from django.shortcuts import render
 from tempapp import tempsensor
 
 
-def read():
+def temp(request):
     location = "/sys/bus/w1/devices/28-3c01d60784f5/w1_slave"
     tfile = open(location)
     text = tfile.read()
@@ -12,13 +12,5 @@ def read():
     temperature = float(temperaturedata[2:])
     celsius = temperature / 1000
     farenheit = (celsius * 1.8) + 32
-    return celsius, farenheit
-
-
-celsius = read().celsius
-farenheit = read().farenheit
-
-
-def temp(request):
     context = {"temp": celsius}
     return render(request, "tempapp/main.html", context)
