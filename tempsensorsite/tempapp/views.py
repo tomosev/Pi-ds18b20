@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def temp(request):
     # The same as commenting out code but just to make it easier
-    testing = 0
+    testing = 1
     # This is the location of your device, the 28-3c01d60784f5 will be diffirent for everyone.
     if testing == 1:
         location = "/sys/bus/w1/devices/28-3c01d60784f5/w1_slave"
