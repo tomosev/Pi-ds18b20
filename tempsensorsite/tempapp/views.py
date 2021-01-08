@@ -16,6 +16,6 @@ def temp(request):
         celsius = temperature / 1000
         farenheit = (celsius * 1.8) + 32
     else:
-        celsius = 1
+        celsius = 23
     context = {"temp": celsius}
     return render(request, "tempapp/main.html", context)

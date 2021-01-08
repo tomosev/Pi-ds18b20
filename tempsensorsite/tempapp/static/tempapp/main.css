@@ -1,0 +1,14 @@
+body{
+    height: 100%;
+    color: rgb(22, 22, 22);
+}
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+.temp{
+    font-weight: 600;
+}
